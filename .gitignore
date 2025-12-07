@@ -1,0 +1,24 @@
+# --- Archivos de sistema y entorno ---
+.env
+venv/
+__pycache__/
+.DS_Store
+
+# --- Archivos generados por el proyecto ---
+recortes_alimentos/
+captura_*.jpg
+*.log
+
+# --- Archivos de YOLO ---
+# Ignoramos todos los archivos .pt por defecto (pesan mucho)
+*.pt
+
+# Ignoramos el contenido de runs, pero permitimos la estructura de carpetas
+runs/*
+
+# --- EXCEPCIONES ---
+# Permitimos entrar en la carpeta especifica del modelo
+!runs/healthy-rotten10/
+
+# Permitimos el archivo del modelo específico (si pesa menos de 100MB)
+!runs/healthy-rotten10/weights/best.pt
