@@ -1,5 +1,5 @@
 import os
-from dotenv import load_dotenv  # <--- Importar esto
+from dotenv import load_dotenv
 from ultralytics import YOLO
 
 # Cargar las variables del archivo .env
