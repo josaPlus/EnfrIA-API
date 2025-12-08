@@ -3,7 +3,7 @@ from datetime import datetime
 class SystemState:
     def __init__(self):
         self.state = {
-            "mensaje": "Esperando sensor",
+            # "mensaje": "Esperando sensor",
             "timestamp": None,
             "scan_id": 0,
             "total_alimentos": 0,

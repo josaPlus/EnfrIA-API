@@ -9,7 +9,7 @@ load_dotenv()
 CAMERA_URL = os.getenv("CAMERA_URL") 
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
 
-# Validar que existan (Buena práctica)
+# Validar que existan
 if not GEMINI_API_KEY:
     raise ValueError("ERROR: No se encontró GEMINI_API_KEY en el archivo .env")
 
