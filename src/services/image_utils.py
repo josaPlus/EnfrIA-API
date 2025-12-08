@@ -12,7 +12,6 @@ class CropImage:
 
     def recortar_alimentos(self, datos_json: list):
         
-        # CORRECCIÓN: Usamos OUTPUT_DIR en lugar de directorio_salida
         if not os.path.exists(OUTPUT_DIR):
             os.makedirs(OUTPUT_DIR)
             print(f" directorio creado: {OUTPUT_DIR}")
@@ -48,7 +47,6 @@ class CropImage:
             label_seguro = label.replace(" ", "_")
             timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
             
-            # CORRECCIÓN: Usamos OUTPUT_DIR aquí también
             nombre_archivo = f"{OUTPUT_DIR}/{i}_{label_seguro}_{timestamp}.jpg"
 
             # Guardar el recorte
@@ -64,7 +62,6 @@ def limpiar_archivos(temp_image, recortes):
         if os.path.exists(temp_image): 
             os.remove(temp_image)
         
-        # Agregamos la lógica para borrar los recortes también
         if recortes:
             for recorte in recortes:
                 if os.path.exists(recorte):

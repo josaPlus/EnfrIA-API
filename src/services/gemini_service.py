@@ -50,12 +50,11 @@ class GeminiAPI:
                 
             except exceptions.ResourceExhausted:
                 print("cuota excedida.")
-                time.sleep(10) # Espera obligatoria antes de reintentar
+                time.sleep(10)
                 continue # Vuelve al inicio del loop
                 
             except Exception as e:
                 print(f"error en Gemini: {e}")
-                # Si es otro tipo de error, imprimimos y salimos
                 return None
         
         print("se agotaron los reintentos con Gemini.")
